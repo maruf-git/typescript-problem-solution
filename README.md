@@ -46,3 +46,58 @@ interface Admin extends User {
 type ExtendedProduct = Product & {
   price: number;
 };
+
+<hr />
+
+# 🧩 TypeScript Union (`|`) and Intersection (`&`) Types – Simple Examples
+
+## 🔹 Union Type (`|`)
+Union types let a variable hold **one of several types**.
+
+```ts
+type Status = "success" | "error" | "loading";
+
+function showStatus(status: Status) {
+  if (status === "success") {
+    console.log("✅ Operation successful");
+  } else if (status === "error") {
+    console.log("❌ Something went wrong");
+  } else {
+    console.log("⏳ Loading...");
+  }
+}
+
+showStatus("loading"); // Output: ⏳ Loading...
+
+
+## 🔹Intersection Type (&)
+Intersection types combine multiple types into one.**.
+
+```ts
+type User = {
+  name: string;
+  email: string;
+};
+
+type Admin = {
+  role: "admin";
+  accessLevel: number;
+};
+
+type AdminUser = User & Admin;
+
+const admin: AdminUser = {
+  name: "Alice",
+  email: "alice@example.com",
+  role: "admin",
+  accessLevel: 5,
+};
+
+console.log(admin.name); // Output: Alice
+
+🔄 Summary
+| Feature | Union (|) | Intersection (&) |
+|----------------|-----------------------------------|-------------------------------------------|
+| Meaning | Either type A or type B | Type A and type B |
+| Use Case | Allow multiple possibilities | Combine multiple requirements |
+| Example Output | "loading" | { name, email, role, accessLevel } |
