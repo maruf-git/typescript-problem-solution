@@ -97,15 +97,8 @@ const admin: AdminUser = {
 console.log(admin.name); // Output: Alice
 ```
 ## 🔄 Summary
-| Feature | `Union (`|`)` | `Intersection (&)` |
-|----------------|-----------------------------------|-------------------------------------------|
+| Feature | `Union` | `Intersection` |
+|--------|-------------|--------|
 | Meaning | Either type A or type B | Type A and type B |
 | Use Case | Allow multiple possibilities | Combine multiple requirements |
 | Example Output | "loading" | { name, email, role, accessLevel } |
-
-| Feature | `Union (`|`)` | `type` |
-|--------|-------------|--------|
-| Extending | Can extend other interfaces or types using `extends` | Can extend via intersection (`&`) |
-| Declaration merging | ✅ Yes (multiple declarations merge) | ❌ No (redeclaring causes an error) |
-| Use with primitives | ❌ No | ✅ Yes (e.g., `type ID = string \| number`) |
-| Computed types | ❌ Limited | ✅ Powerful (can use conditional, mapped, and union types) |
