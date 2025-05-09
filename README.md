@@ -46,6 +46,7 @@ interface Admin extends User {
 type ExtendedProduct = Product & {
   price: number;
 };
+```
 
 <hr />
 
@@ -68,7 +69,7 @@ function showStatus(status: Status) {
 }
 
 showStatus("loading"); // Output: ⏳ Loading...
-
+```
 
 ## 🔹Intersection Type (&)
 Intersection types combine multiple types into one.**.
@@ -94,7 +95,7 @@ const admin: AdminUser = {
 };
 
 console.log(admin.name); // Output: Alice
-
+```
 🔄 Summary
 | Feature | Union (|) | Intersection (&) |
 |----------------|-----------------------------------|-------------------------------------------|
