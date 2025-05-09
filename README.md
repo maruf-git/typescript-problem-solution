@@ -9,16 +9,16 @@ Both `interface` and `type` can:
 - Be extended or composed.
 - Be used for function signatures.
 
-## ⚖️ Differences
+## 🔹 Differences
 
 | Feature | `interface` | `type` |
 |--------|-------------|--------|
 | Extending | Can extend other interfaces or types using `extends` | Can extend via intersection (`&`) |
-| Declaration merging | ✅ Yes (multiple declarations merge) | ❌ No (redeclaring causes an error) |
-| Use with primitives | ❌ No | ✅ Yes (e.g., `type ID = string \| number`) |
-| Computed types | ❌ Limited | ✅ Powerful (can use conditional, mapped, and union types) |
+| Declaration merging |  Yes (multiple declarations merge) |  No (redeclaring causes an error) |
+| Use with primitives |  No |  Yes (e.g., `type ID = string \| number`) |
+| Computed types |  Limited |  Powerful (can use conditional, mapped, and union types) |
 
-### 🧠 When to Use What?
+### 🔹 When to Use What?
 
 - Use **`interface`** when designing the shape of **objects or classes**, especially when you expect them to be extended.
 - Use **`type`** when you need **union, intersection, or primitive types**, or when working with more advanced type logic.
@@ -50,7 +50,7 @@ type ExtendedProduct = Product & {
 
 <hr />
 
-# 🧩 TypeScript Union (`|`) and Intersection (`&`) Types – Simple Examples
+# 📘 TypeScript Union (`|`) and Intersection (`&`) Types – Simple Examples
 
 ## 🔹 Union Type (`|`)
 Union types let a variable hold **one of several types**.
@@ -60,9 +60,9 @@ type Status = "success" | "error" | "loading";
 
 function showStatus(status: Status) {
   if (status === "success") {
-    console.log("✅ Operation successful");
+    console.log("Operation successful");
   } else if (status === "error") {
-    console.log("❌ Something went wrong");
+    console.log("Something went wrong");
   } else {
     console.log("⏳ Loading...");
   }
